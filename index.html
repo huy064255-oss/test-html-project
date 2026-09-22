@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="script.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trăng Rằm Decor & Toys - Đồ Chơi Trung Thu Ký Ức Tuổi Thơ</title>
+    
+    <!-- Google Fonts: Be Vietnam Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        :root {
+            --primary-red: #972828;
+            --coral-red: #E45742;
+            --vibrant-orange: #EB7F31;
+            --warm-gold: #FCAD38;
+            --bg-cream: #FFFDF9;
+            --dark-maroon: #501212;
+        }
+
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: var(--bg-cream);
+            color: #2D3748;
+            overflow-x: hidden;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--coral-red);
+            border-radius: 4px;
+        }
+
+        /* Theme Color Helper Classes */
+        .bg-primary-red { background-color: var(--primary-red); }
+        .bg-coral-red { background-color: var(--coral-red); }
+        .bg-vibrant-orange { background-color: var(--vibrant-orange); }
+        .bg-warm-gold { background-color: var(--warm-gold); }
+        
+        .text-primary-red { color: var(--primary-red); }
+        .text-coral-red { color: var(--coral-red); }
+        .text-vibrant-orange { color: var(--vibrant-orange); }
+        .text-warm-gold { color: var(--warm-gold); }
+
+        .border-primary-red { border-color: var(--primary-red); }
+        .border-warm-gold { border-color: var(--warm-gold); }
+
+        /* Glowing Moon Effect */
+        .glowing-moon {
+            box-shadow: 0 0 50px 15px rgba(252, 173, 56, 0.45), inset 0 0 20px rgba(252, 173, 56, 0.6);
+        }
+
+        /* Floating Lantern Animation */
+        @keyframes floatLantern {
+            0% { transform: translateY(0px) rotate(-2deg); }
+            50% { transform: translateY(-15px) rotate(3deg); }
+            100% { transform: translateY(0px) rotate(-2deg); }
+        }
+
+        .animate-float-slow {
+            animation: floatLantern 4s ease-in-out infinite;
+        }
+        .animate-float-fast {
+            animation: floatLantern 2.8s ease-in-out infinite alternate;
+        }
+
+        /* Pulse Gold Button */
+        @keyframes goldPulse {
+            0% { box-shadow: 0 0 0 0 rgba(252, 173, 56, 0.7); }
+            70% { box-shadow: 0 0 0 12px rgba(252, 173, 56, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(252, 173, 56, 0); }
+        }
+        .pulse-gold {
+            animation: goldPulse 2s infinite;
+        }
+
+        /* Drawer Slide Animation */
+        .drawer-slide {
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Glassmorphism Backgrounds */
+        .glass-header {
+            background: rgba(151, 40, 40, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(252, 173, 56, 0.2);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-[#501212] via-[var(--primary-red)] to-[#501212] text-white text-xs md:text-sm py-2 px-4 text-center font-medium flex justify-between items-center z-50 relative border-b border-[#FCAD38]/30">
+        <div class="hidden md:flex items-center space-x-2 text-[var(--warm-gold)]">
+            <i class="fa-solid fa-moon"></i>
+            <span>Trung Thu Yêu Thương 2026</span>
+        </div>
+        <div class="w-full md:w-auto flex justify-center items-center space-x-2">
+            <span class="bg-[var(--warm-gold)] text-[var(--primary-red)] text-xs px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">Ưu Đãi Hot</span>
+            <span>Giảm tới <strong class="text-[var(--warm-gold)]">30%</strong> cho các đơn hàng Đèn Lồng Dân Gian!</span>
+        </div>
+        <div class="hidden md:flex items-center space-x-4 text-xs text-gray-200">
+            <a href="tel:19008888" class="hover:text-[var(--warm-gold)] transition"><i class="fa-solid fa-phone mr-1"></i> 1900 8888</a>
+            <span>|</span>
+            <span><i class="fa-solid fa-truck-fast mr-1"></i> Giao hàng siêu tốc 2H</span>
+        </div>
+    </div>
+
+    <!-- Header & Navigation Bar -->
+    <header class="sticky top-0 z-40 glass-header text-white shadow-xl border-b border-[var(--warm-gold)]/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo with Glowing Moon & Star Icon -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="relative w-11 h-11 bg-gradient-to-tr from-[var(--coral-red)] to-[var(--warm-gold)] rounded-full flex items-center justify-center glowing-moon transition transform group-hover:scale-105">
+                        <i class="fa-solid fa-star text-[var(--primary-red)] text-xl animate-pulse"></i>
+                        <span class="absolute -top-1 -right-1 text-xs text-[var(--warm-gold)]"><i class="fa-solid fa-sparkles"></i></span>
+                    </div>
+                    <div>
+                        <span class="block text-xl md:text-2xl font-extrabold tracking-wider font-serif text-[var(--warm-gold)] drop-shadow">TRĂNG RẰM</span>
+                        <span class="block text-[10px] tracking-widest uppercase text-amber-100 font-semibold">Decor & Traditional Toys</span>
+                    </div>
+                </a>
+
+                <!-- Search Bar (Desktop) -->
+                <div class="hidden md:flex flex-1 max-w-md mx-8">
+                    <div class="relative w-full">
+                        <input type="text" id="searchInput" onkeyup="handleSearch()" placeholder="Tìm đèn ông sao, đầu lân, mặt nạ..." class="w-full bg-white/10 text-white placeholder-amber-100/70 text-sm rounded-full pl-5 pr-12 py-2.5 border border-[var(--warm-gold)]/40 focus:outline-none focus:bg-white focus:text-gray-900 focus:placeholder-gray-400 transition-all shadow-inner">
+                        <button class="absolute right-1 top-1/2 -translate-y-1/2 bg-[var(--vibrant-orange)] hover:bg-[var(--coral-red)] text-white w-9 h-9 rounded-full flex items-center justify-center transition shadow">
+                            <i class="fa-solid fa-magnifying-glass text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Navigation Links (Desktop) -->
+                <nav class="hidden lg:flex items-center space-x-7 text-sm font-semibold">
+                    <a href="#hero" class="text-[var(--warm-gold)] hover:text-white transition py-1 border-b-2 border-[var(--warm-gold)]">Trang Chủ</a>
+                    <a href="#products" class="hover:text-[var(--warm-gold)] transition py-1">Sản Phẩm</a>
+                    <a href="#promotions" class="hover:text-[var(--warm-gold)] transition py-1 relative">
+                        Khuyến Mãi
+                        <span class="absolute -top-2 -right-3 bg-[var(--coral-red)] text-white text-[9px] px-1.5 py-0.2 rounded-full font-bold uppercase animate-bounce">HOT</span>
+                    </a>
+                    <a href="#story" class="hover:text-[var(--warm-gold)] transition py-1">Góc Trung Thu</a>
+                    <a href="#footer" class="hover:text-[var(--warm-gold)] transition py-1">Liên Hệ</a>
+                </nav>
+
+                <!-- User Action Icons -->
+                <div class="flex items-center space-x-4">
+                    <!-- Wishlist Button -->
+                    <button onclick="toggleWishlistModal()" class="relative text-white hover:text-[var(--warm-gold)] transition p-2">
+                        <i class="fa-regular fa-heart text-xl"></i>
+                        <span id="wishlistBadge" class="absolute top-0 right-0 bg-[var(--coral-red)] text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center hidden">0</span>
+                    </button>
+
+                    <!-- Shopping Cart Button -->
+                    <button onclick="toggleCartDrawer()" class="relative bg-gradient-to-r from-[var(--vibrant-orange)] to-[var(--coral-red)] text-white px-4 py-2 rounded-full font-bold flex items-center space-x-2 hover:shadow-lg hover:brightness-110 transition transform active:scale-95 border border-[var(--warm-gold)]/40">
+                        <i class="fa-solid fa-basket-shopping text-lg"></i>
+                        <span class="hidden sm:inline">Giỏ Hàng</span>
+                        <span id="cartBadge" class="bg-[var(--warm-gold)] text-[var(--primary-red)] text-xs font-black rounded-full px-2 py-0.5 ml-1">0</span>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button onclick="toggleMobileMenu()" class="lg:hidden text-white hover:text-[var(--warm-gold)] focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Search Bar -->
+        <div class="md:hidden px-4 pb-3">
+            <div class="relative w-full">
+                <input type="text" id="mobileSearchInput" onkeyup="handleSearch()" placeholder="Tìm kiếm sản phẩm Trung Thu..." class="w-full bg-white/10 text-white placeholder-amber-100/70 text-sm rounded-full pl-4 pr-10 py-2 border border-[var(--warm-gold)]/40 focus:outline-none focus:bg-white focus:text-gray-900">
+                <button class="absolute right-1 top-1/2 -translate-y-1/2 bg-[var(--vibrant-orange)] text-white w-7 h-7 rounded-full flex items-center justify-center text-xs">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-[var(--primary-red)] border-t border-[var(--warm-gold)]/30 px-4 py-3 space-y-2 text-sm">
+            <a href="#hero" class="block py-2 text-[var(--warm-gold)] font-bold">Trang Chủ</a>
+            <a href="#products" class="block py-2 hover:text-[var(--warm-gold)] border-t border-white/10">Danh Mục Sản Phẩm</a>
+            <a href="#promotions" class="block py-2 hover:text-[var(--warm-gold)] border-t border-white/10">Khuyến Mãi Đêm Rằm</a>
+            <a href="#story" class="block py-2 hover:text-[var(--warm-gold)] border-t border-white/10">Ý Nghĩa Trung Thu</a>
+            <a href="#footer" class="block py-2 hover:text-[var(--warm-gold)] border-t border-white/10">Liên Hệ & Cửa Hàng</a>
+        </div>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section id="hero" class="relative bg-gradient-to-b from-[var(--primary-red)] via-[#681818] to-[#3a0b0b] text-white overflow-hidden pt-8 pb-16 md:py-24">
+        <!-- Floating Lantern Decorative SVGs -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden z-0 opacity-80">
+            <!-- Floating Lantern 1 -->
+            <div class="absolute top-10 left-[8%] animate-float-slow opacity-90">
+                <div class="w-12 h-16 md:w-16 md:h-20 bg-gradient-to-b from-[var(--warm-gold)] via-[var(--vibrant-orange)] to-[var(--coral-red)] rounded-t-full rounded-b-lg shadow-lg relative flex items-center justify-center border border-yellow-200/50">
+                    <i class="fa-solid fa-star text-white/90 text-xl"></i>
+                    <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 flex space-x-1">
+                        <span class="w-1 h-5 bg-red-600 block"></span>
+                        <span class="w-1 h-6 bg-yellow-400 block"></span>
+                        <span class="w-1 h-5 bg-red-600 block"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating Lantern 2 -->
+            <div class="absolute top-28 right-[10%] animate-float-fast opacity-85">
+                <div class="w-14 h-14 md:w-20 md:h-20 bg-gradient-to-r from-[var(--coral-red)] to-[var(--vibrant-orange)] rounded-full shadow-2xl relative flex items-center justify-center border-2 border-[var(--warm-gold)]">
+                    <span class="text-xs md:text-sm font-serif font-bold text-yellow-100">福</span>
+                    <div class="absolute -bottom-5 left-1/2 -translate-x-1/2 w-1.5 h-6 bg-yellow-400"></div>
+                </div>
+            </div>
+
+            <!-- Glowing Full Moon in background -->
+            <div class="absolute top-8 left-1/2 -translate-x-1/2 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-tr from-amber-100 via-yellow-200 to-[var(--warm-gold)] rounded-full opacity-20 glowing-moon blur-md"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <!-- Hero Text Content -->
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md border border-[var(--warm-gold)]/40 rounded-full px-4 py-1.5 text-xs md:text-sm text-[var(--warm-gold)] font-medium">
+                        <i class="fa-solid fa-sparkles"></i>
+                        <span>Bộ Sưu Tập Đồ Chơi Trung Thu 2026</span>
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Đón Tết Trung Thu <br class="hidden sm:inline">
+                        <span class="bg-gradient-to-r from-[var(--warm-gold)] via-amber-200 to-[var(--vibrant-orange)] bg-clip-text text-transparent drop-shadow">
+                            Trọn Vẹn Ký Ức Tuổi Thơ
+                        </span>
+                    </h1>
+                    
+                    <p class="text-amber-100/90 text-sm md:text-base max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        Khám phá thế giới đồ chơi Trung Thu đa dạng từ lồng đèn giấy bồi thủ công, đèn ông sao ngũ sắc rực rỡ đến các bộ lồng đèn hiện đại phát nhạc sáng tạo. Lưu giữ nét đẹp văn hóa Việt Nam!
+                    </p>
+
+                    <!-- Hero Call to Action Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#products" class="w-full sm:w-auto bg-gradient-to-r from-[var(--warm-gold)] via-[var(--vibrant-orange)] to-[var(--coral-red)] text-[var(--dark-maroon)] font-extrabold px-8 py-4 rounded-full shadow-2xl hover:brightness-110 transition transform hover:-translate-y-1 flex items-center justify-center space-x-2 text-base pulse-gold">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span>SẮM ĐỒ CHƠI NGAY</span>
+                        </a>
+                        <a href="#promotions" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white font-semibold px-7 py-4 rounded-full border border-white/30 backdrop-blur-sm transition flex items-center justify-center space-x-2 text-base">
+                            <i class="fa-solid fa-gift text-[var(--warm-gold)]"></i>
+                            <span>Xem Ưu Đãi Đêm Rằm</span>
+                        </a>
+                    </div>
+
+                    <!-- Highlight Badges -->
+                    <div class="grid grid-cols-3 gap-3 pt-6 border-t border-white/10 max-w-lg mx-auto lg:mx-0 text-center">
+                        <div class="p-2 rounded-xl bg-white/5 border border-white/5">
+                            <i class="fa-solid fa-shield-heart text-xl text-[var(--warm-gold)] mb-1"></i>
+                            <p class="text-xs font-semibold">An Toàn Cho Bé</p>
+                        </div>
+                        <div class="p-2 rounded-xl bg-white/5 border border-white/5">
+                            <i class="fa-solid fa-wand-magic-sparkles text-xl text-[var(--warm-gold)] mb-1"></i>
+                            <p class="text-xs font-semibold">Thủ Công Tinh Xảo</p>
+                        </div>
+                        <div class="p-2 rounded-xl bg-white/5 border border-white/5">
+                            <i class="fa-solid fa-truck-fast text-xl text-[var(--warm-gold)] mb-1"></i>
+                            <p class="text-xs font-semibold">Giao Nhanh Toàn Quốc</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Visual / Featured Product Showcase -->
+                <div class="lg:col-span-5 relative flex justify-center">
+                    <div class="relative w-full max-w-md aspect-square rounded-3xl p-6 bg-gradient-to-tr from-[var(--coral-red)]/40 to-[var(--warm-gold)]/20 border border-[var(--warm-gold)]/30 backdrop-blur-md flex items-center justify-center shadow-2xl">
+                        <!-- Background Glow Circle -->
+                        <div class="absolute inset-4 rounded-2xl bg-gradient-to-br from-[var(--primary-red)] to-[var(--vibrant-orange)] opacity-90 shadow-inner"></div>
+                        
+                        <!-- Hero Image Display -->
+                        <div class="relative z-10 text-center space-y-4">
+                            <div class="relative inline-block animate-float-slow">
+                                <img src="https://images.unsplash.com/photo-1531972111231-7482a960e109?auto=format&fit=crop&w=600&q=80" alt="Đèn Ông Sao Trung Thu" class="w-64 h-64 md:w-72 md:h-72 object-cover rounded-2xl border-4 border-[var(--warm-gold)] shadow-2xl">
+                                <span class="absolute -top-3 -left-3 bg-[var(--coral-red)] text-white font-extrabold text-xs px-3 py-1 rounded-full uppercase shadow-md border border-white">🔥 Best Seller</span>
+                            </div>
+                            <div class="bg-black/40 backdrop-blur-md p-3 rounded-xl border border-amber-200/20">
+                                <h3 class="font-bold text-sm text-[var(--warm-gold)]">Đèn Ông Sao Truyền Thống Ngũ Sắc</h3>
+                                <p class="text-xs text-amber-100">Kích thước 50cm • Khung tre tự nhiên • Giấy bóng kính rực rỡ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content & Product Store Section -->
+    <main id="products" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="text-xs font-bold uppercase tracking-widest text-[var(--coral-red)] bg-orange-100 px-3 py-1 rounded-full">Sản Phẩm Mới Nhất</span>
+            <h2 class="text-3xl font-extrabold text-[var(--primary-red)] mt-2 font-serif">Đồ Chơi Trung Thu Chọn Lọc</h2>
+            <p class="text-gray-600 text-sm mt-1">Đầy đủ chủng loại từ không gian truyền thống ấm áp đến phong cách hiện đại sôi động</p>
+            <div class="w-16 h-1 bg-gradient-to-r from-[var(--coral-red)] to-[var(--warm-gold)] mx-auto mt-3 rounded-full"></div>
+        </div>
+
+        <!-- Filter Buttons & Sorting Bar -->
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-8 bg-amber-50/60 p-4 rounded-2xl border border-amber-200/50">
+            <!-- Category Filter Tabs -->
+            <div class="flex flex-wrap items-center justify-center gap-2 w-full md:w-auto" id="categoryFilters">
+                <button onclick="filterCategory('all')" class="cat-btn active bg-[var(--primary-red)] text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded-xl transition shadow">
+                    ✨ Tất Cả
+                </button>
+                <button onclick="filterCategory('traditional')" class="cat-btn bg-white hover:bg-amber-100 text-gray-700 text-xs sm:text-sm font-semibold px-4 py-2 rounded-xl transition border border-gray-200">
+                    🏮 Lồng Đèn Truyền Thống
+                </button>
+                <button onclick="filterCategory('modern')" class="cat-btn bg-white hover:bg-amber-100 text-gray-700 text-xs sm:text-sm font-semibold px-4 py-2 rounded-xl transition border border-gray-200">
+                    🐰 Lồng Đèn Hiện Đại
+                </button>
+                <button onclick="filterCategory('lion-drum')" class="cat-btn bg-white hover:bg-amber-100 text-gray-700 text-xs sm:text-sm font-semibold px-4 py-2 rounded-xl transition border border-gray-200">
+                    🦁 Đầu Lân & Trống
+                </button>
+                <button onclick="filterCategory('mask')" class="cat-btn bg-white hover:bg-amber-100 text-gray-700 text-xs sm:text-sm font-semibold px-4 py-2 rounded-xl transition border border-gray-200">
+                    🎭 Mặt Nạ Dân Gian
+                </button>
+            </div>
+
+            <!-- Sort dropdown -->
+            <div class="flex items-center space-x-2 w-full md:w-auto justify-end">
+                <label for="sortSelect" class="text-xs font-bold text-gray-600 whitespace-nowrap"><i class="fa-solid fa-arrow-down-short-wide mr-1"></i>Sắp xếp:</label>
+                <select id="sortSelect" onchange="sortProducts()" class="bg-white border border-gray-300 text-gray-700 text-xs rounded-xl px-3 py-2 focus:outline-none focus:border-[var(--coral-red)] shadow-sm">
+                    <option value="featured">Nổi bật nhất</option>
+                    <option value="price-low">Giá: Thấp đến Cao</option>
+                    <option value="price-high">Giá: Cao đến Thấp</option>
+                    <option value="rating">Đánh giá cao nhất</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Product Grid Container -->
+        <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Product items rendered dynamically via JavaScript -->
+        </div>
+
+        <!-- Empty state when no search/filter match -->
+        <div id="noProductsFound" class="hidden text-center py-16">
+            <div class="w-20 h-20 mx-auto bg-orange-100 text-[var(--coral-red)] rounded-full flex items-center justify-center text-3xl mb-4">
+                <i class="fa-solid fa-face-frown"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-800">Không tìm thấy sản phẩm phù hợp!</h3>
+            <p class="text-sm text-gray-500 mt-1">Vui lòng thử tìm kiếm với từ khóa khác hoặc xóa bộ lọc.</p>
+            <button onclick="resetFilters()" class="mt-4 bg-[var(--primary-red)] text-white text-xs font-bold px-5 py-2.5 rounded-full hover:bg-[var(--coral-red)] transition">Xóa bộ lọc</button>
+        </div>
+
+    </main>
+
+    <!-- Special Mid-Autumn Countdown Promo Section -->
+    <section id="promotions" class="bg-gradient-to-r from-[#501212] via-[var(--primary-red)] to-[var(--vibrant-orange)] text-white py-12 px-4 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+            <div class="lg:col-span-7 space-y-4 text-center lg:text-left">
+                <span class="bg-[var(--warm-gold)] text-[var(--primary-red)] font-extrabold text-xs px-3 py-1 rounded-full uppercase tracking-wider">⚡ Chương Trình Đặc Biệt</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold font-serif text-[var(--warm-gold)]">
+                    Đêm Hội Rước Đèn - Nhận Mã Giảm Giá 20%
+                </h2>
+                <p class="text-amber-100 text-sm max-w-xl">
+                    Áp dụng cho tất cả các đơn hàng từ 300.000đ khi đặt trước ngày Rằm Tháng Tám. Hãy chuẩn bị món quà Trung Thu tuyệt vời cho bé yêu ngay hôm nay!
+                </p>
+                <!-- Countdown Timer -->
+                <div class="flex justify-center lg:justify-start space-x-3 pt-2" id="countdown">
+                    <div class="bg-black/40 border border-[var(--warm-gold)]/40 p-3 rounded-xl min-w-[65px] text-center">
+                        <span id="cdDays" class="block text-2xl font-black text-[var(--warm-gold)]">15</span>
+                        <span class="text-[10px] text-gray-300 uppercase">Ngày</span>
+                    </div>
+                    <div class="bg-black/40 border border-[var(--warm-gold)]/40 p-3 rounded-xl min-w-[65px] text-center">
+                        <span id="cdHours" class="block text-2xl font-black text-[var(--warm-gold)]">08</span>
+                        <span class="text-[10px] text-gray-300 uppercase">Giờ</span>
+                    </div>
+                    <div class="bg-black/40 border border-[var(--warm-gold)]/40 p-3 rounded-xl min-w-[65px] text-center">
+                        <span id="cdMins" class="block text-2xl font-black text-[var(--warm-gold)]">42</span>
+                        <span class="text-[10px] text-gray-300 uppercase">Phút</span>
+                    </div>
+                    <div class="bg-black/40 border border-[var(--warm-gold)]/40 p-3 rounded-xl min-w-[65px] text-center">
+                        <span id="cdSecs" class="block text-2xl font-black text-[var(--warm-gold)]">19</span>
+                        <span class="text-[10px] text-gray-300 uppercase">Giây</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="bg-white/10 backdrop-blur-md border border-[var(--warm-gold)]/30 p-6 rounded-2xl w-full max-w-md text-center space-y-4">
+                    <h3 class="font-extrabold text-lg text-[var(--warm-gold)]">Đăng Ký Nhận Mã Ưu Đãi 10%</h3>
+                    <p class="text-xs text-amber-100">Nhập email của bạn để nhận mã voucher đặc biệt gửi ngay vào hộp thư!</p>
+                    <form onsubmit="handleNewsletter(event)" class="flex gap-2">
+                        <input type="email" required placeholder="Nhập địa chỉ email của bạn..." class="w-full text-xs px-4 py-3 rounded-xl bg-white text-gray-900 focus:outline-none">
+                        <button type="submit" class="bg-[var(--warm-gold)] hover:bg-amber-300 text-[var(--primary-red)] font-black text-xs px-5 py-3 rounded-xl whitespace-nowrap transition shadow-lg">NHẬN MÃ</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials / Customer Reviews -->
+    <section class="py-12 bg-amber-50/40 border-b border-amber-200/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs font-bold uppercase tracking-widest text-[var(--coral-red)]">Cảm Nhận Khách Hàng</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-[var(--primary-red)] font-serif mt-1">Ba Mẹ Nói Gì Về Trăng Rằm?</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-orange-100 space-y-3 relative">
+                    <div class="text-[var(--warm-gold)] text-sm flex space-x-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-xs sm:text-sm italic">"Đèn lồng thỏ ngọc phát nhạc mua cho bé nhà mình xinh xỉu! Đèn sáng rực rỡ, nhạc tiếng Việt vui tươi, đóng gói cẩn thận có xốp chống sốc."</p>
+                    <div class="flex items-center space-x-3 pt-2 border-t border-gray-100">
+                        <div class="w-9 h-9 rounded-full bg-[var(--coral-red)] text-white font-bold text-xs flex items-center justify-center">MH</div>
+                        <div>
+                            <h4 class="font-bold text-xs text-gray-800">Mẹ Mai Hương</h4>
+                            <span class="text-[10px] text-gray-400">Hà Nội • Đã mua Đèn Thỏ Ngọc</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-orange-100 space-y-3 relative">
+                    <div class="text-[var(--warm-gold)] text-sm flex space-x-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-xs sm:text-sm italic">"Đầu lân mini làm rất chắc chắn và đẹp mắt. Bé nhà mình thích lắm, ngày nào cũng lôi ra múa lân cùng các bạn trong xóm!"</p>
+                    <div class="flex items-center space-x-3 pt-2 border-t border-gray-100">
+                        <div class="w-9 h-9 rounded-full bg-[var(--vibrant-orange)] text-white font-bold text-xs flex items-center justify-center">TD</div>
+                        <div>
+                            <h4 class="font-bold text-xs text-gray-800">Bố Tuấn Đạt</h4>
+                            <span class="text-[10px] text-gray-400">TP. Hồ Chí Minh • Đã mua Đầu Lân Mini</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-orange-100 space-y-3 relative">
+                    <div class="text-[var(--warm-gold)] text-sm flex space-x-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-xs sm:text-sm italic">"Giao hàng nhanh trong ngày, sản phẩm đèn ông sao truyền thống chuẩn đẹp như ký ức hồi nhỏ của mình. Cảm ơn shop rất nhiều!"</p>
+                    <div class="flex items-center space-x-3 pt-2 border-t border-gray-100">
+                        <div class="w-9 h-9 rounded-full bg-[var(--primary-red)] text-white font-bold text-xs flex items-center justify-center">AN</div>
+                        <div>
+                            <h4 class="font-bold text-xs text-gray-800">Chị Ánh Nguyệt</h4>
+                            <span class="text-[10px] text-gray-400">Đà Nẵng • Đã mua Đèn Ông Sao</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer" class="bg-[var(--dark-maroon)] text-white pt-12 pb-6 border-t-4 border-[var(--warm-gold)]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 border-b border-white/10">
+            
+            <!-- Col 1: Store Intro -->
+            <div class="space-y-4">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-[var(--warm-gold)] rounded-full flex items-center justify-center text-[var(--primary-red)] font-bold">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="text-xl font-bold font-serif text-[var(--warm-gold)]">TRĂNG RẰM</span>
+                </div>
+                <p class="text-xs text-amber-100/80 leading-relaxed">
+                    Cửa hàng chuyên cung cấp đồ chơi Tết Trung Thu dân gian và hiện đại chất lượng cao, an toàn cho trẻ em, mang niềm vui rộn rã đêm rằm đến từng mái nhà.
+                </p>
+                <div class="flex space-x-3 text-sm text-[var(--warm-gold)] pt-2">
+                    <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-[var(--coral-red)] hover:text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-[var(--coral-red)] hover:text-white transition"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-[var(--coral-red)] hover:text-white transition"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Col 2: Quick Links -->
+            <div class="space-y-3">
+                <h3 class="text-sm font-bold text-[var(--warm-gold)] uppercase tracking-wider">Danh Mục Sản Phẩm</h3>
+                <ul class="space-y-2 text-xs text-amber-100/80">
+                    <li><a href="#" class="hover:text-[var(--warm-gold)] transition">Lồng Đèn Ông Sao Ngũ Sắc</a></li>
+                    <li><a href="#" class="hover:text-[var(--warm-gold)] transition">Lồng Đèn Thỏ Ngọc Phát Nhạc</a></li>
+                    <li><a href="#" class="hover:text-[var(--warm-gold)] transition">Đầu Lân & Trống Gỗ Nhỏ</a></li>
+                    <li><a href="#" class="hover:text-[var(--warm-gold)] transition">Mặt Nạ Giấy Bồi Dân Gian</a></li>
+                    <li><a href="#" class="hover:text-[var(--warm-gold)] transition">Combo Rước Đèn Đêm Rằm</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Contact Info -->
+            <div class="space-y-3">
+                <h3 class="text-sm font-bold text-[var(--warm-gold)] uppercase tracking-wider">Liên Hệ Cửa Hàng</h3>
+                <ul class="space-y-2 text-xs text-amber-100/80">
+                    <li class="flex items-start space-x-2">
+                        <i class="fa-solid fa-location-dot mt-0.5 text-[var(--warm-gold)]"></i>
+                        <span>123 Phố Hàng Ma, Hoàn Kiếm, Hà Nội</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <i class="fa-solid fa-phone text-[var(--warm-gold)]"></i>
+                        <span>Hotline: 1900 8888 - 0988 123 456</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <i class="fa-solid fa-envelope text-[var(--warm-gold)]"></i>
+                        <span>Email: cskh@trangramtoys.vn</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <i class="fa-solid fa-clock text-[var(--warm-gold)]"></i>
+                        <span>Mở cửa: 08:00 - 22:00 (Tất cả các ngày)</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Payment & Shipping -->
+            <div class="space-y-3">
+                <h3 class="text-sm font-bold text-[var(--warm-gold)] uppercase tracking-wider">Thanh Toán & Vận Chuyển</h3>
+                <p class="text-xs text-amber-100/80">Chấp nhận đa dạng hình thức thanh toán tiện lợi:</p>
+                <div class="flex flex-wrap gap-2 text-lg text-gray-800">
+                    <span class="bg-white px-2 py-1 rounded shadow text-xs font-bold text-blue-800">MoMo</span>
+                    <span class="bg-white px-2 py-1 rounded shadow text-xs font-bold text-green-700">VNPay</span>
+                    <span class="bg-white px-2 py-1 rounded shadow text-xs font-bold text-red-600">COD</span>
+                    <span class="bg-white px-2 py-1 rounded shadow text-xs font-bold text-blue-600">Visa/Master</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Copyright -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-amber-100/50 pt-6">
+            <p>© 2026 Trăng Rằm Decor & Toys. Mọi quyền được bảo lưu. Thiết kế cho dịp Tết Trung Thu Việt Nam.</p>
+        </div>
+    </footer>
+
+    <!-- SLIDE-OUT CART DRAWER -->
+    <div id="cartOverlay" onclick="toggleCartDrawer()" class="fixed inset-0 bg-black/60 z-50 hidden backdrop-blur-sm transition-opacity"></div>
+    
+    <div id="cartDrawer" class="fixed top-0 right-0 h-full w-full sm:w-[420px] bg-white z-50 shadow-2xl transform translate-x-full drawer-slide flex flex-col">
+        <!-- Cart Header -->
+        <div class="bg-[var(--primary-red)] text-white p-4 flex items-center justify-between border-b border-[var(--warm-gold)]">
+            <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-basket-shopping text-lg text-[var(--warm-gold)]"></i>
+                <h3 class="font-bold text-base font-serif">Giỏ Hàng Của Bạn</h3>
+                <span id="cartItemCountHeader" class="bg-[var(--warm-gold)] text-[var(--primary-red)] text-xs font-extrabold px-2 py-0.5 rounded-full">0 món</span>
+            </div>
+            <button onclick="toggleCartDrawer()" class="text-white hover:text-[var(--warm-gold)] text-xl p-1">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <!-- Cart Items List Container -->
+        <div id="cartItemsList" class="flex-grow overflow-y-auto p-4 space-y-4">
+            <!-- Rendered by JS -->
+        </div>
+
+        <!-- Cart Footer / Summary -->
+        <div class="p-4 bg-amber-50/60 border-t border-amber-200/60 space-y-3">
+            <div class="flex justify-between items-center text-sm">
+                <span class="text-gray-600">Tạm tính:</span>
+                <span id="cartSubtotal" class="font-bold text-gray-800">0 đ</span>
+            </div>
+            <div class="flex justify-between items-center text-sm">
+                <span class="text-gray-600">Phí giao hàng:</span>
+                <span class="text-xs text-green-600 font-semibold">Miễn phí (Nội thành)</span>
+            </div>
+            <div class="flex justify-between items-center text-base pt-2 border-t border-gray-200">
+                <span class="font-bold text-gray-900">Tổng cộng:</span>
+                <span id="cartTotal" class="font-extrabold text-xl text-[var(--primary-red)]">0 đ</span>
+            </div>
+
+            <button onclick="openCheckoutModal()" class="w-full bg-gradient-to-r from-[var(--coral-red)] to-[var(--vibrant-orange)] hover:brightness-110 text-white font-extrabold py-3 rounded-xl shadow-lg transition flex items-center justify-center space-x-2">
+                <span>TIẾN HÀNH ĐẶT HÀNG</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <button onclick="toggleCartDrawer()" class="w-full text-center text-xs text-gray-500 hover:text-gray-800 font-semibold pt-1">
+                Tiếp tục mua sắm
+            </button>
+        </div>
+    </div>
+
+    <!-- QUICK VIEW MODAL -->
+    <div id="quickViewModal" class="fixed inset-0 bg-black/60 z-50 hidden backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl relative transform transition-all animate-scale-up border border-[var(--warm-gold)]">
+            <button onclick="closeQuickView()" class="absolute top-3 right-3 bg-gray-100 hover:bg-gray-200 text-gray-700 w-8 h-8 rounded-full flex items-center justify-center z-10">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            
+            <div id="quickViewContent" class="grid grid-cols-1 md:grid-cols-2">
+                <!-- Content injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- CHECKOUT SIMULATION MODAL -->
+    <div id="checkoutModal" class="fixed inset-0 bg-black/60 z-50 hidden backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border border-[var(--warm-gold)] relative">
+            <button onclick="closeCheckoutModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="text-center space-y-2 mb-6">
+                <div class="w-12 h-12 bg-orange-100 text-[var(--primary-red)] rounded-full flex items-center justify-center mx-auto text-xl">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </div>
+                <h3 class="text-xl font-bold font-serif text-[var(--primary-red)]">Thông Tin Giao Hàng</h3>
+                <p class="text-xs text-gray-500">Điền thông tin nhận hàng để hoàn tất đơn đồ chơi Trung Thu!</p>
+            </div>
+
+            <form onsubmit="handleCheckoutSubmit(event)" class="space-y-3">
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 mb-1">Họ và tên người nhận</label>
+                    <input type="text" required placeholder="Ví dụ: Nguyễn Văn A" class="w-full text-xs px-3 py-2.5 rounded-xl border border-gray-300 focus:outline-none focus:border-[var(--coral-red)]">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 mb-1">Số điện thoại liên hệ</label>
+                    <input type="tel" required placeholder="0987xxxxxx" class="w-full text-xs px-3 py-2.5 rounded-xl border border-gray-300 focus:outline-none focus:border-[var(--coral-red)]">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 mb-1">Địa chỉ giao hàng</label>
+                    <textarea required rows="2" placeholder="Số nhà, tên đường, phường/xã..." class="w-full text-xs px-3 py-2.5 rounded-xl border border-gray-300 focus:outline-none focus:border-[var(--coral-red)]"></textarea>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 mb-1">Hình thức thanh toán</label>
+                    <select class="w-full text-xs px-3 py-2.5 rounded-xl border border-gray-300 focus:outline-none focus:border-[var(--coral-red)]">
+                        <option>Thanh toán khi nhận hàng (COD)</option>
+                        <option>Chuyển khoản Ngân hàng (QR Code)</option>
+                        <option>Ví MoMo / VNPay</option>
+                    </select>
+                </div>
+
+                <div class="pt-2">
+                    <button type="submit" class="w-full bg-[var(--primary-red)] hover:bg-[var(--coral-red)] text-white font-extrabold py-3 rounded-xl shadow-md transition">
+                        XÁC NHẬN ĐẶT HÀNG
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div id="toastContainer" class="fixed bottom-5 left-5 z-50 flex flex-col space-y-2 pointer-events-none"></div>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        /* Product Database */
+        const PRODUCTS = [
+            {
+                id: 1,
+                name: "Đèn Ông Sao Truyền Thống Ngũ Sắc",
+                category: "traditional",
+                price: 45000,
+                originalPrice: 55000,
+                badge: "Bán chạy",
+                badgeColor: "bg-red-500",
+                rating: 5.0,
+                reviews: 128,
+                image: "https://images.unsplash.com/photo-1531972111231-7482a960e109?auto=format&fit=crop&w=500&q=80",
+                desc: "Đèn ông sao 5 cánh truyền thống làm thủ công từ tre nứa tự nhiên, bọc giấy bóng kính đủ màu rực rỡ. Thích hợp cho bé rước đèn đêm rằm."
+            },
+            {
+                id: 2,
+                name: "Lồng Đèn Thỏ Ngọc Phát Nhạc LED",
+                category: "modern",
+                price: 120000,
+                originalPrice: 150000,
+                badge: "-20%",
+                badgeColor: "bg-orange-500",
+                rating: 4.9,
+                reviews: 94,
+                image: "https://images.unsplash.com/photo-1513297887119-d46091b24bfa?auto=format&fit=crop&w=500&q=80",
+                desc: "Lồng đèn thỏ ngọc phát nhạc Trung Thu Việt Nam sôi động, có hệ thống đèn LED đa sắc, thiết kế dễ thương tay cầm an toàn cho bé."
+            },
+            {
+                id: 3,
+                name: "Đầu Lân Gấm Đỏ Mini Cao Cấp",
+                category: "lion-drum",
+                price: 280000,
+                originalPrice: 350000,
+                badge: "Hot",
+                badgeColor: "bg-red-600",
+                rating: 4.8,
+                reviews: 67,
+                image: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=500&q=80",
+                desc: "Mô hình đầu lân gấm đỏ được thêu họa tiết sắc nét, đính kim sa lấp lánh và lông vũ tự nhiên. Tặng kèm đuôi lân vải gấm."
+            },
+            {
+                id: 4,
+                name: "Trống Gỗ Dân Gian Rước Đèn",
+                category: "lion-drum",
+                price: 65000,
+                originalPrice: 80000,
+                badge: "Mới",
+                badgeColor: "bg-green-600",
+                rating: 4.7,
+                reviews: 42,
+                image: "https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?auto=format&fit=crop&w=500&q=80",
+                desc: "Trống gỗ bọc da thật sơn đỏ rực rỡ, phát ra âm thanh giòn giã rộn rã. Kích thước vừa vặn cho các bé mầm non và tiểu học."
+            },
+            {
+                id: 5,
+                name: "Bộ Mặt Nạ Giấy Bồi Chú Tễu & Chị Hằng",
+                category: "mask",
+                price: 85000,
+                originalPrice: 100000,
+                badge: "Khuyên dùng",
+                badgeColor: "bg-yellow-600",
+                rating: 4.9,
+                reviews: 88,
+                image: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=500&q=80",
+                desc: "Set 2 mặt nạ giấy bồi vẽ tay thủ công bằng sơn an toàn. Tái hiện hình ảnh Chú Tễu vui vẻ và Chị Hằng dịu dàng trong sự tích Trung Thu."
+            },
+            {
+                id: 6,
+                name: "Lồng Đèn Cá Chép Hóa Rồng Xoay",
+                category: "traditional",
+                price: 195000,
+                originalPrice: 230000,
+                badge: "-15%",
+                badgeColor: "bg-orange-500",
+                rating: 4.8,
+                reviews: 53,
+                image: "https://images.unsplash.com/photo-1572913017567-d21820461879?auto=format&fit=crop&w=500&q=80",
+                desc: "Lồng đèn kéo quân cá chép hóa rồng tự xoay bằng hơi nến ấm hoặc đèn chạy pin. Biểu tượng cho may mắn và sự vươn lên."
+            },
+            {
+                id: 7,
+                name: "Lồng Đèn Gỗ Tự Lắp Ráp DIY Thỏ Con",
+                category: "modern",
+                price: 160000,
+                originalPrice: 180000,
+                badge: "Sáng tạo",
+                badgeColor: "bg-blue-600",
+                rating: 5.0,
+                reviews: 31,
+                image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=500&q=80",
+                desc: "Bộ đồ chơi lắp ráp lồng đèn gỗ ghép hình thỏ con. Giúp bé rèn luyện tư duy sáng tạo và khéo tay cùng bố mẹ."
+            },
+            {
+                id: 8,
+                name: "Mặt Nạ Dân Gian Tễu Cười Bằng Tre",
+                category: "mask",
+                price: 50000,
+                originalPrice: 65000,
+                badge: "Giá tốt",
+                badgeColor: "bg-teal-600",
+                rating: 4.6,
+                reviews: 29,
+                image: "https://images.unsplash.com/photo-1543807535-eceef0bc6599?auto=format&fit=crop&w=500&q=80",
+                desc: "Mặt nạ đan bằng tre nứa tự nhiên, sơn màu tươi sáng. Nhẹ nhàng, thoáng mát, thích hợp cho lễ hội rước đèn học đường."
+            }
+        ];
+
+        /* App State */
+        let cart = [];
+        let wishlist = new Set();
+        let currentCategory = 'all';
+
+        // Initialize App
+        window.addEventListener('DOMContentLoaded', () => {
+            renderProducts(PRODUCTS);
+            updateCartUI();
+            startCountdown();
+        });
+
+        // Format Currency VND
+        function formatVND(amount) {
+            return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(amount);
+        }
+
+        // Render Product List
+        function renderProducts(items) {
+            const grid = document.getElementById('productGrid');
+            const noFound = document.getElementById('noProductsFound');
+            
+            grid.innerHTML = '';
+
+            if (items.length === 0) {
+                noFound.classList.remove('hidden');
+                return;
+            } else {
+                noFound.classList.add('hidden');
+            }
+
+            items.forEach(product => {
+                const isLiked = wishlist.has(product.id);
+                const card = document.createElement('div');
+                card.className = "bg-white rounded-2xl overflow-hidden border border-amber-100 shadow-sm hover:shadow-xl transition transform hover:-translate-y-1 flex flex-col justify-between group";
+                
+                card.innerHTML = `
+                    <div class="relative overflow-hidden aspect-square bg-amber-50">
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        
+                        <!-- Badge -->
+                        <span class="absolute top-3 left-3 ${product.badgeColor} text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase shadow">
+                            ${product.badge}
+                        </span>
+
+                        <!-- Wishlist Button -->
+                        <button onclick="toggleWishlist(${product.id})" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 backdrop-blur-md text-gray-600 hover:text-[var(--coral-red)] flex items-center justify-center transition shadow">
+                            <i class="${isLiked ? 'fa-solid fa-heart text-red-500' : 'fa-regular fa-heart'} text-sm"></i>
+                        </button>
+
+                        <!-- Quick View Overlay Button -->
+                        <div class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center">
+                            <button onclick="openQuickView(${product.id})" class="bg-white/90 hover:bg-white text-gray-800 text-xs font-bold px-4 py-2 rounded-full shadow backdrop-blur-sm transition flex items-center space-x-1">
+                                <i class="fa-solid fa-eye text-xs"></i>
+                                <span>Xem nhanh</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="p-4 flex-grow flex flex-col justify-between space-y-3">
+                        <div>
+                            <!-- Star Ratings -->
+                            <div class="flex items-center space-x-1 text-xs text-[var(--warm-gold)] mb-1">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="font-bold text-gray-700 ml-1">${product.rating}</span>
+                                <span class="text-gray-400 text-[10px]">(${product.reviews})</span>
+                            </div>
+
+                            <h3 class="font-bold text-sm text-gray-800 line-clamp-2 hover:text-[var(--primary-red)] transition cursor-pointer" onclick="openQuickView(${product.id})">
+                                ${product.name}
+                            </h3>
+                        </div>
+
+                        <div>
+                            <!-- Pricing -->
+                            <div class="flex items-baseline space-x-2">
+                                <span class="text-base font-extrabold text-[var(--primary-red)]">${formatVND(product.price)}</span>
+                                <span class="text-xs text-gray-400 line-through">${formatVND(product.originalPrice)}</span>
+                            </div>
+
+                            <!-- Add to Cart Button -->
+                            <button onclick="addToCart(${product.id})" class="w-full mt-3 bg-gradient-to-r from-[var(--coral-red)] to-[var(--vibrant-orange)] hover:brightness-105 text-white font-bold py-2 px-3 rounded-xl text-xs transition shadow flex items-center justify-center space-x-1">
+                                <i class="fa-solid fa-cart-plus"></i>
+                                <span>Thêm vào giỏ</span>
+                            </button>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Filter Category Function
+        function filterCategory(cat) {
+            currentCategory = cat;
+            
+            // Update Tab UI
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                btn.classList.remove('bg-[var(--primary-red)]', 'text-white', 'shadow');
+                btn.classList.add('bg-white', 'text-gray-700');
+            });
+            event.currentTarget.classList.remove('bg-white', 'text-gray-700');
+            event.currentTarget.classList.add('bg-[var(--primary-red)]', 'text-white', 'shadow');
+
+            if (cat === 'all') {
+                renderProducts(PRODUCTS);
+            } else {
+                const filtered = PRODUCTS.filter(p => p.category === cat);
+                renderProducts(filtered);
+            }
+        }
+
+        // Sort Products
+        function sortProducts() {
+            const sortVal = document.getElementById('sortSelect').value;
+            let items = [...PRODUCTS];
+
+            if (currentCategory !== 'all') {
+                items = items.filter(p => p.category === currentCategory);
+            }
+
+            if (sortVal === 'price-low') {
+                items.sort((a, b) => a.price - b.price);
+            } else if (sortVal === 'price-high') {
+                items.sort((a, b) => b.price - a.price);
+            } else if (sortVal === 'rating') {
+                items.sort((a, b) => b.rating - a.rating);
+            }
+
+            renderProducts(items);
+        }
+
+        // Handle Search Input
+        function handleSearch() {
+            const query = (document.getElementById('searchInput').value || document.getElementById('mobileSearchInput').value).toLowerCase().trim();
+            const filtered = PRODUCTS.filter(p => p.name.toLowerCase().includes(query) || p.desc.toLowerCase().includes(query));
+            renderProducts(filtered);
+        }
+
+        function resetFilters() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('mobileSearchInput').value = '';
+            filterCategory('all');
+        }
+
+        /* Cart Operations */
+        function addToCart(productId, qty = 1) {
+            const product = PRODUCTS.find(p => p.id === productId);
+            if (!product) return;
+
+            const existing = cart.find(item => item.id === productId);
+            if (existing) {
+                existing.qty += qty;
+            } else {
+                cart.push({ ...product, qty: qty });
+            }
+
+            updateCartUI();
+            showToast(`Đã thêm "${product.name}" vào giỏ hàng!`);
+        }
+
+        function updateCartQty(id, delta) {
+            const item = cart.find(i => i.id === id);
+            if (!item) return;
+
+            item.qty += delta;
+            if (item.qty <= 0) {
+                cart = cart.filter(i => i.id !== id);
+            }
+
+            updateCartUI();
+        }
+
+        function removeFromCart(id) {
+            cart = cart.filter(i => i.id !== id);
+            updateCartUI();
+            showToast("Đã xóa sản phẩm khỏi giỏ hàng");
+        }
+
+        function updateCartUI() {
+            const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+            document.getElementById('cartBadge').innerText = totalCount;
+            document.getElementById('cartItemCountHeader').innerText = `${totalCount} món`;
+            document.getElementById('cartSubtotal').innerText = formatVND(subtotal);
+            document.getElementById('cartTotal').innerText = formatVND(subtotal);
+
+            // Render Cart Drawer List
+            const listContainer = document.getElementById('cartItemsList');
+            if (cart.length === 0) {
+                listContainer.innerHTML = `
+                    <div class="text-center py-12 space-y-3">
+                        <i class="fa-solid fa-basket-shopping text-4xl text-gray-300"></i>
+                        <p class="text-sm font-semibold text-gray-500">Giỏ hàng của bạn đang trống!</p>
+                        <button onclick="toggleCartDrawer()" class="text-xs text-[var(--coral-red)] font-bold underline">Sắm lồng đèn ngay</button>
+                    </div>
+                `;
+            } else {
+                listContainer.innerHTML = cart.map(item => `
+                    <div class="flex items-center space-x-3 bg-gray-50 p-3 rounded-xl border border-gray-100">
+                        <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-cover rounded-lg">
+                        <div class="flex-grow">
+                            <h4 class="text-xs font-bold text-gray-800 line-clamp-1">${item.name}</h4>
+                            <span class="text-xs font-extrabold text-[var(--primary-red)]">${formatVND(item.price)}</span>
+                            
+                            <!-- Qty Controls -->
+                            <div class="flex items-center space-x-2 mt-1">
+                                <button onclick="updateCartQty(${item.id}, -1)" class="w-5 h-5 bg-white border border-gray-300 rounded text-xs flex items-center justify-center hover:bg-gray-100">-</button>
+                                <span class="text-xs font-bold">${item.qty}</span>
+                                <button onclick="updateCartQty(${item.id}, 1)" class="w-5 h-5 bg-white border border-gray-300 rounded text-xs flex items-center justify-center hover:bg-gray-100">+</button>
+                            </div>
+                        </div>
+                        <button onclick="removeFromCart(${item.id})" class="text-gray-400 hover:text-red-500 p-1">
+                            <i class="fa-solid fa-trash-can text-sm"></i>
+                        </button>
+                    </div>
+                `).join('');
+            }
+        }
+
+        function toggleCartDrawer() {
+            const drawer = document.getElementById('cartDrawer');
+            const overlay = document.getElementById('cartOverlay');
+
+            const isOpen = !drawer.classList.contains('translate-x-full');
+            if (isOpen) {
+                drawer.classList.add('translate-x-full');
+                overlay.classList.add('hidden');
+            } else {
+                drawer.classList.remove('translate-x-full');
+                overlay.classList.remove('hidden');
+            }
+        }
+
+        /* Quick View Modal */
+        function openQuickView(id) {
+            const product = PRODUCTS.find(p => p.id === id);
+            if (!product) return;
+
+            const content = document.getElementById('quickViewContent');
+            content.innerHTML = `
+                <div class="aspect-square bg-amber-50">
+                    <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex flex-col justify-between space-y-4">
+                    <div>
+                        <span class="text-[10px] font-bold text-[var(--coral-red)] bg-orange-100 px-2 py-0.5 rounded-full uppercase">Sản Phẩm Nổi Bật</span>
+                        <h3 class="text-xl font-bold font-serif text-gray-800 mt-2">${product.name}</h3>
+                        
+                        <div class="flex items-center space-x-2 my-2 text-xs text-[var(--warm-gold)]">
+                            <i class="fa-solid fa-star"></i>
+                            <span class="font-bold text-gray-700">${product.rating}</span>
+                            <span class="text-gray-400">(${product.reviews} đánh giá)</span>
+                        </div>
+
+                        <div class="flex items-baseline space-x-2 my-3">
+                            <span class="text-2xl font-black text-[var(--primary-red)]">${formatVND(product.price)}</span>
+                            <span class="text-sm text-gray-400 line-through">${formatVND(product.originalPrice)}</span>
+                        </div>
+
+                        <p class="text-xs text-gray-600 leading-relaxed">${product.desc}</p>
+                    </div>
+
+                    <div class="space-y-3 pt-4 border-t border-gray-100">
+                        <button onclick="addToCart(${product.id}); closeQuickView();" class="w-full bg-[var(--primary-red)] hover:bg-[var(--coral-red)] text-white font-extrabold py-3 rounded-xl shadow-lg transition flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span>THÊM VÀO GIỎ HÀNG</span>
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('quickViewModal').classList.remove('hidden');
+        }
+
+        function closeQuickView() {
+            document.getElementById('quickViewModal').classList.add('hidden');
+        }
+
+        /* Wishlist Logic */
+        function toggleWishlist(id) {
+            if (wishlist.has(id)) {
+                wishlist.delete(id);
+                showToast("Đã xóa khỏi danh sách yêu thích");
+            } else {
+                wishlist.add(id);
+                showToast("Đã thêm vào danh sách yêu thích!");
+            }
+            
+            document.getElementById('wishlistBadge').innerText = wishlist.size;
+            document.getElementById('wishlistBadge').classList.toggle('hidden', wishlist.size === 0);
+            renderProducts(PRODUCTS);
+        }
+
+        /* Checkout Modal logic */
+        function openCheckoutModal() {
+            if (cart.length === 0) {
+                showToast("Giỏ hàng đang trống!");
+                return;
+            }
+            toggleCartDrawer();
+            document.getElementById('checkoutModal').classList.remove('hidden');
+        }
+
+        function closeCheckoutModal() {
+            document.getElementById('checkoutModal').classList.add('hidden');
+        }
+
+        function handleCheckoutSubmit(e) {
+            e.preventDefault();
+            closeCheckoutModal();
+            cart = [];
+            updateCartUI();
+            
+            showToast("🎉 Đặt hàng thành công! Trăng Rằm sẽ liên hệ bạn sớm nhất.", 5000);
+        }
+
+        function handleNewsletter(e) {
+            e.preventDefault();
+            showToast("Mã giảm giá 10% đã được gửi đến email của bạn!", 4000);
+            e.target.reset();
+        }
+
+        /* Mobile Menu Toggle */
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        /* Countdown Timer */
+        function startCountdown() {
+            let seconds = 15 * 86400 + 8 * 3600 + 42 * 60 + 19;
+            setInterval(() => {
+                seconds--;
+                if (seconds < 0) seconds = 86400;
+
+                const d = Math.floor(seconds / 86400);
+                const h = Math.floor((seconds % 86400) / 3600);
+                const m = Math.floor((seconds % 3600) / 60);
+                const s = seconds % 60;
+
+                document.getElementById('cdDays').innerText = d < 10 ? '0' + d : d;
+                document.getElementById('cdHours').innerText = h < 10 ? '0' + h : h;
+                document.getElementById('cdMins').innerText = m < 10 ? '0' + m : m;
+                document.getElementById('cdSecs').innerText = s < 10 ? '0' + s : s;
+            }, 1000);
+        }
+
+        /* Toast Notifications */
+        function showToast(message, duration = 3000) {
+            const container = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+            toast.className = "bg-gray-900/90 text-white text-xs font-semibold px-4 py-3 rounded-xl shadow-2xl backdrop-blur-md border border-[var(--warm-gold)]/40 flex items-center space-x-2 pointer-events-auto transform transition duration-300 translate-y-2 opacity-0";
+            toast.innerHTML = `<i class="fa-solid fa-bell text-[var(--warm-gold)]"></i> <span>${message}</span>`;
+            
+            container.appendChild(toast);
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-2', 'opacity-0');
+            }, 10);
+
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-2');
+                setTimeout(() => toast.remove(), 300);
+            }, duration);
+        }
+    </script>
+</body>
+</head>
+</html>
